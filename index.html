@@ -3,7 +3,6 @@
   <title>Aeroscribe</title>
 </head>
 <script src="js/jquery.js"></script>
-<script src="https://apis.google.com/js/client.js?onload=OnLoadCallback"></script>
 <script type="text/javascript">
 
   queriedTerms = []
@@ -20,8 +19,19 @@
   function fetchImage(){
     //if the last word hasn't already been queried, return, else query for a new image
   }
+  
+  function anything(){
+    
+    gapi.client.load('customsearch', 'v1', function(){console.log('loaded')});
+    gapi.client.setApiKey('AIzaSyC9cKY80kW7pOfkf_mw4eCecKcRxMF4NsA');
+    console.log("anything");
+   
+  }
 
 </script>
+
+<script src="https://apis.google.com/js/client.js?onload=anything"></script>
+
 <body>
   <div class="images-container"></div>
   <textarea class="main-input"></textarea>
